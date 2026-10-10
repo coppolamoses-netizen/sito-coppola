@@ -15,7 +15,7 @@
                 extend: {
                     colors: {
                         coppola: {
-                            blue: '#29729c', /* Colore estratto dal tuo logo */
+                            blue: '#29729c',
                             black: '#000000',
                             red: '#d12d2d',
                             green: '#2c8038',
@@ -30,34 +30,36 @@
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(41, 114, 156, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
         }
-        .text-gradient {
-            background: linear-gradient(to right, #000000, #29729c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     </style>
 </head>
 <body class="font-sans antialiased text-slate-800 bg-white">
 
-    <!-- HEADER / NAVIGATION -->
+    <!-- HEADER / NAVIGATION CON LOGO CENTRALE -->
     <header class="sticky top-0 z-50 bg-white text-slate-900 shadow-md border-b-4 border-coppola-blue">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
-            <!-- Brand / Logo Originale -->
-<div class="flex items-center h-32 sm:h-40">
-    <img src="logo.jpg" alt="Logo Coppola Construction Company" class="h-full object-contain">
-</div>
-
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center py-4 sm:h-24">
             
-            <nav class="hidden md:flex space-x-8 font-semibold text-sm text-slate-600">
+            <!-- Menu sinistro su desktop -->
+            <nav class="hidden md:flex space-x-6 font-semibold text-sm text-slate-600">
                 <a href="#home" class="hover:text-coppola-blue transition">Home</a>
                 <a href="#servizi" class="hover:text-coppola-blue transition">Servizi</a>
-                <a href="#chi-siamo" class="hover:text-coppola-blue transition">Chi Siamo</a>
-                <a href="#contatti" class="hover:text-coppola-blue transition">Contatti</a>
+                <a href="#galleria" class="hover:text-coppola-blue transition">Galleria Lavori</a>
             </nav>
 
-            <a href="tel:+393382807040" class="hidden sm:inline-flex items-center bg-coppola-blue hover:bg-opacity-90 text-white font-bold px-5 py-2.5 rounded-lg transition text-sm shadow-md">
-                <i class="fa-solid fa-phone mr-2"></i> Chiamaci
-            </a>
+            <!-- LOGO CENTRALE -->
+            <div class="flex justify-center items-center my-2 sm:my-0 h-16 sm:h-20">
+                <img src="logo2.jpg" alt="Logo Coppola Construction Company" class="h-full object-contain">
+            </div>
+
+            <!-- Menu destro / Contatto rapido -->
+            <div class="flex items-center space-x-4">
+                <nav class="hidden md:flex space-x-6 font-semibold text-sm text-slate-600">
+                    <a href="#chi-siamo" class="hover:text-coppola-blue transition">Chi Siamo</a>
+                    <a href="#contatti" class="hover:text-coppola-blue transition">Contatti</a>
+                </nav>
+                <a href="tel:+393382807040" class="inline-flex items-center bg-coppola-blue hover:bg-opacity-90 text-white font-bold px-4 py-2 rounded-lg transition text-xs sm:text-sm shadow-md">
+                    <i class="fa-solid fa-phone mr-2"></i> Chiamaci
+                </a>
+            </div>
         </div>
     </header>
 
@@ -74,16 +76,13 @@
                 <p class="text-lg text-slate-200 mb-8 leading-relaxed font-medium">
                     Guidati da Mosè e Donatello Coppola. Soluzioni edili complete, dal ripristino facciate alle finiture d'interni, con massima trasparenza e sicurezza garantita.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a href="#contatti" class="inline-flex justify-center items-center bg-coppola-blue hover:bg-opacity-90 text-white font-bold px-6 py-4 rounded-lg transition text-base shadow-lg">
                         Richiedi un Preventivo
                         <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
                     <a href="https://wa.me/393382807040" target="_blank" class="inline-flex justify-center items-center bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-4 rounded-lg transition text-base shadow-lg">
-                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Contatta Mosè
-                    </a>
-                    <a href="https://wa.me/393892490024" target="_blank" class="inline-flex justify-center items-center bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-4 rounded-lg transition text-base shadow-lg">
-                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Contatta Donatello
+                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> WhatsApp Mosè
                     </a>
                 </div>
             </div>
@@ -187,6 +186,53 @@
                         Lavori di manutenzione ordinaria e straordinaria per condomini e privati, ripristino cornicioni e sicurezza strutturale.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERIA FOTOGRAFICA REALE (32 FOTO) -->
+    <section id="galleria" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-coppola-black mb-4">Galleria Lavori Reali</h2>
+                <div class="w-24 h-1 bg-coppola-blue mx-auto mb-6"></div>
+                <p class="text-slate-600 font-medium">Scatti reali dai nostri cantieri: finiture, ristrutturazioni e opere edili eseguite a Torremaggiore.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Foto 1-32 -->
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto1.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto2.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto3.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto4.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto5.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto6.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto7.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto8.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto9.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto10.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto11.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto12.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto13.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto14.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto15.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto16.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto17.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto18.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto19.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto20.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto21.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto22.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto23.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto24.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto25.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto26.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto27.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto28.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto29.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto30.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto31.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
+                <div class="overflow-hidden rounded-xl shadow-lg bg-white group"><div class="h-64 bg-slate-200"><img src="Foto32.jpg" alt="Cantiere Coppola" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-4"><h4 class="font-bold text-coppola-black text-sm">Cantiere & Finiture Edili</h4></div></div>
             </div>
         </div>
     </section>

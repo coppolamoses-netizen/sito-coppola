@@ -4,66 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COPPOLA CONSTRUCTION COMPANY | Ristrutturazioni ed Edilizia a Torremaggiore</title>
-    <meta name="description" content="Impresa edilizia di Coppola Mosè a Torremaggiore (FG). Specializzati in ripristino facciate, ristrutturazioni, opere murarie, posa pavimenti e pitturazione.">
+    <meta name="description" content="Impresa edilizia di Coppola Mosè & Donatello a Torremaggiore (FG). Specializzati in ripristino facciate, ristrutturazioni, opere murarie, posa pavimenti e pitturazione.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coppola: {
+                            blue: '#29729c', /* Colore estratto dal tuo logo */
+                            black: '#000000',
+                            red: '#d12d2d',
+                            green: '#2c8038',
+                            gray: '#f4f4f5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         .hero-bg {
-            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(41, 114, 156, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #000000, #29729c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="font-sans antialiased text-slate-800 bg-slate-50">
+<body class="font-sans antialiased text-slate-800 bg-white">
 
     <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-50 bg-slate-900 text-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+    <header class="sticky top-0 z-50 bg-white text-slate-900 shadow-md border-b-4 border-coppola-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+            <!-- Brand / Logo Area (sostituto testo con colori logo) -->
             <div class="flex items-center space-x-3">
-                <div class="bg-amber-500 p-2.5 rounded-lg text-slate-900 font-bold text-xl">
-                    <i class="fa-solid font-bold fa-helmet-safety"></i>
+                <div class="flex items-end h-10 w-10 mr-2">
+                    <div class="w-3 h-10 bg-coppola-black rounded-t-sm"></div>
+                    <div class="w-2 h-6 bg-coppola-green mx-0.5 rounded-t-sm"></div>
+                    <div class="w-2 h-6 bg-coppola-red mr-0.5 rounded-t-sm"></div>
+                    <div class="w-3 h-10 bg-coppola-blue rounded-t-sm"></div>
                 </div>
-                <div>
-                    <span class="text-xl font-bold tracking-wider block leading-none">COPPOLA</span>
-                    <span class="text-xs text-amber-400 font-medium tracking-widest uppercase">Construction Company</span>
+                <div class="flex flex-col">
+                    <span class="text-3xl font-extrabold tracking-tight leading-none text-coppola-black">Coppola</span>
+                    <span class="text-sm font-semibold tracking-wide text-coppola-blue">construction company</span>
                 </div>
             </div>
             
-            <nav class="hidden md:flex space-x-8 font-medium text-sm text-slate-300">
-                <a href="#home" class="hover:text-amber-400 transition">Home</a>
-                <a href="#servizi" class="hover:text-amber-400 transition">Servizi</a>
-                <a href="#chi-siamo" class="hover:text-amber-400 transition">Chi Siamo</a>
-                <a href="#garanzie" class="hover:text-amber-400 transition">Sicurezza & Qualità</a>
-                <a href="#contatti" class="hover:text-amber-400 transition">Contatti</a>
+            <nav class="hidden md:flex space-x-8 font-semibold text-sm text-slate-600">
+                <a href="#home" class="hover:text-coppola-blue transition">Home</a>
+                <a href="#servizi" class="hover:text-coppola-blue transition">Servizi</a>
+                <a href="#chi-siamo" class="hover:text-coppola-blue transition">Chi Siamo</a>
+                <a href="#contatti" class="hover:text-coppola-blue transition">Contatti</a>
             </nav>
 
-            <a href="tel:+393382807040" class="hidden sm:inline-flex items-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-4 py-2.5 rounded-lg transition text-sm">
-                <i class="fa-solid fa-phone mr-2"></i> 338 2807 040
+            <a href="tel:+393382807040" class="hidden sm:inline-flex items-center bg-coppola-blue hover:bg-opacity-90 text-white font-bold px-5 py-2.5 rounded-lg transition text-sm shadow-md">
+                <i class="fa-solid fa-phone mr-2"></i> Chiamaci
             </a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="hero-bg text-white py-24 lg:py-32">
+    <section id="home" class="hero-bg text-white py-24 lg:py-32 border-b-8 border-coppola-black">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
             <div class="max-w-3xl">
-                <span class="inline-block bg-amber-500/20 text-amber-400 border border-amber-500/30 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
-                    Edilizia & Ristrutturazioni a Torremaggiore e Provincia
+                <span class="inline-block bg-white/20 text-white border border-white/40 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                    Edilizia & Ristrutturazioni a Torremaggiore
                 </span>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-                    Soluzioni Edili Professionali e Lavori a Regola d'Arte
+                    Costruiamo con Passione, Ristrutturiamo con Precisione.
                 </h1>
-                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
-                    Dalle ristrutturazioni complete al ripristino facciate e cemento armato. Affidabilità, massima trasparenza e conformità alle normative di sicurezza nei cantieri.
+                <p class="text-lg text-slate-200 mb-8 leading-relaxed font-medium">
+                    Guidati da Mosè e Donatello Coppola. Soluzioni edili complete, dal ripristino facciate alle finiture d'interni, con massima trasparenza e sicurezza garantita.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contatti" class="inline-flex justify-center items-center bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-lg transition text-base shadow-lg">
-                        Richiedi un Preventivo Gratuito
+                    <a href="#contatti" class="inline-flex justify-center items-center bg-coppola-blue hover:bg-opacity-90 text-white font-bold px-6 py-4 rounded-lg transition text-base shadow-lg">
+                        Richiedi un Preventivo
                         <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
-                    <a href="https://wa.me/393382807040" target="_blank" class="inline-flex justify-center items-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-lg transition text-base shadow-lg">
-                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Scrivici su WhatsApp
+                    <a href="https://wa.me/393382807040" target="_blank" class="inline-flex justify-center items-center bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-4 rounded-lg transition text-base shadow-lg">
+                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Contatta Mosè
+                    </a>
+                    <a href="https://wa.me/393892490024" target="_blank" class="inline-flex justify-center items-center bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-4 rounded-lg transition text-base shadow-lg">
+                        <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> Contatta Donatello
                     </a>
                 </div>
             </div>
@@ -71,23 +99,23 @@
     </section>
 
     <!-- HIGHLIGHT STATS -->
-    <section class="bg-amber-500 py-6 text-slate-950 font-bold">
+    <section class="bg-coppola-gray py-8 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-                <p class="text-3xl font-extrabold">100%</p>
-                <p class="text-xs uppercase tracking-wider text-slate-900">Trasparenza nei Preventivi</p>
+                <p class="text-3xl font-extrabold text-coppola-blue">100%</p>
+                <p class="text-xs uppercase tracking-wider text-coppola-black font-bold mt-1">Trasparenza nei Preventivi</p>
             </div>
             <div>
-                <p class="text-3xl font-extrabold">DURC</p>
-                <p class="text-xs uppercase tracking-wider text-slate-900">In Regola & Certificato</p>
+                <p class="text-3xl font-extrabold text-coppola-blue">DURC</p>
+                <p class="text-xs uppercase tracking-wider text-coppola-black font-bold mt-1">Regolare & Certificato</p>
             </div>
             <div>
-                <p class="text-3xl font-extrabold">P.O.S.</p>
-                <p class="text-xs uppercase tracking-wider text-slate-900">Sicurezza in Cantiere</p>
+                <p class="text-3xl font-extrabold text-coppola-blue">P.O.S.</p>
+                <p class="text-xs uppercase tracking-wider text-coppola-black font-bold mt-1">Sicurezza in Cantiere</p>
             </div>
             <div>
-                <p class="text-3xl font-extrabold">Patente</p>
-                <p class="text-xs uppercase tracking-wider text-slate-900">A Crediti Abilitata</p>
+                <p class="text-3xl font-extrabold text-coppola-blue">Patente</p>
+                <p class="text-xs uppercase tracking-wider text-coppola-black font-bold mt-1">A Crediti Abilitata</p>
             </div>
         </div>
     </section>
@@ -96,74 +124,75 @@
     <section id="servizi" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">I Nostri Servizi Specializzati</h2>
-                <p class="text-slate-600">Interventi edili eseguiti con materiali di alta qualità e nel rispetto dei tempi concordati.</p>
+                <h2 class="text-3xl font-extrabold text-coppola-black mb-4">I Nostri Servizi Specializzati</h2>
+                <div class="w-24 h-1 bg-coppola-blue mx-auto mb-6"></div>
+                <p class="text-slate-600 font-medium">Interventi edili eseguiti con materiali di alta qualità, rispettando tempi e normative.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Servizio 1 -->
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                <div class="bg-white border-2 border-slate-100 p-8 rounded-xl hover:border-coppola-blue hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-blue rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-coppola-blue group-hover:text-white transition">
                         <i class="fa-solid fa-building"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Ripristino Facciate & Cemento Armato</h3>
+                    <h3 class="text-xl font-bold text-coppola-black mb-3">Ripristino Facciate</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Interventi di consolidamento strutturale, ripristino del cemento armato ammalorato, rasatura e nuova pitturazione protettiva per esterni.
+                        Interventi di consolidamento strutturale, ripristino del cemento armato ammalorato, rasatura e nuova pitturazione protettiva.
                     </p>
                 </div>
 
                 <!-- Servizio 2 -->
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                <div class="bg-white border-2 border-slate-100 p-8 rounded-xl hover:border-coppola-blue hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-blue rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-coppola-blue group-hover:text-white transition">
                         <i class="fa-solid fa-house-chimney-crack"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Ristrutturazioni Edilizie</h3>
+                    <h3 class="text-xl font-bold text-coppola-black mb-3">Ristrutturazioni</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Ristrutturazione completa o parziale di appartamenti, locali commerciali e abitazioni private: opere murarie, demolizioni e ricostruzioni.
+                        Ristrutturazione completa di appartamenti e abitazioni private: opere murarie, demolizioni e ricostruzioni chiavi in mano.
                     </p>
                 </div>
 
                 <!-- Servizio 3 -->
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                <div class="bg-white border-2 border-slate-100 p-8 rounded-xl hover:border-coppola-blue hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-blue rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-coppola-blue group-hover:text-white transition">
                         <i class="fa-solid fa-border-all"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Posa Pavimenti & Rivestimenti</h3>
+                    <h3 class="text-xl font-bold text-coppola-black mb-3">Posa Pavimenti</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Posa in opera di piastrelle, gres porcellanato, rivestimenti per bagni, cucine e pavimentazioni interne ed esterne con massima precisione.
+                        Posa in opera di piastrelle, gres porcellanato e rivestimenti per bagni e cucine con la massima precisione e cura dei dettagli.
                     </p>
                 </div>
 
                 <!-- Servizio 4 -->
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                <div class="bg-white border-2 border-slate-100 p-8 rounded-xl hover:border-coppola-blue hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-blue rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-coppola-blue group-hover:text-white transition">
                         <i class="fa-solid fa-paint-roller"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Tinteggiatura & Finiture</h3>
+                    <h3 class="text-xl font-bold text-coppola-black mb-3">Tinteggiatura</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Pitturazione di interni ed esterni, trattamenti antimuffa, tinteggiatura di ringhiere per balconi, cancelli metallici e scossaline.
+                        Pitturazione di interni ed esterni, trattamenti antimuffa e finiture di pregio per donare nuova luce ai tuoi ambienti.
                     </p>
                 </div>
 
                 <!-- Servizio 5 -->
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                <div class="bg-white border-2 border-slate-100 p-8 rounded-xl hover:border-coppola-blue hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-blue rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-coppola-blue group-hover:text-white transition">
                         <i class="fa-solid fa-layer-group"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Opere in Cartongesso</h3>
+                    <h3 class="text-xl font-bold text-coppola-black mb-3">Opere in Cartongesso</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Realizzazione di pareti divisorie, contropareti isolanti e controsoffitti per la ridistribuzione moderna degli spazi abitativi.
+                        Realizzazione di pareti divisorie, contropareti isolanti termico/acustiche e controsoffitti dal design moderno.
                     </p>
                 </div>
 
                 <!-- Servizio 6 -->
-                <div class="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-xl transition group">
-                    <div class="w-12 h-12 bg-amber-500/10 text-amber-600 rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                <div class="bg-white border-2 border-slate-100 p-8 rounded-xl hover:border-coppola-blue hover:shadow-xl transition group">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-blue rounded-lg flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-coppola-blue group-hover:text-white transition">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Manutenzione Condominiale</h3>
+                    <h3 class="text-xl font-bold text-coppola-black mb-3">Manutenzioni</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Lavori di manutenzione ordinaria e straordinaria per condomini, ripristino balconi, cornicioni e parti comuni.
+                        Lavori di manutenzione ordinaria e straordinaria per condomini e privati, ripristino cornicioni e sicurezza strutturale.
                     </p>
                 </div>
             </div>
@@ -171,56 +200,56 @@
     </section>
 
     <!-- CHI SIAMO / GARANZIE -->
-    <section id="chi-siamo" class="py-20 bg-slate-900 text-white">
+    <section id="chi-siamo" class="py-20 bg-coppola-black text-white border-t-8 border-coppola-blue">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-                <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">Esperienza & Professionalità</span>
-                <h2 class="text-3xl font-bold mb-6 mt-2">COPPOLA CONSTRUCTION COMPANY</h2>
-                <p class="text-slate-300 leading-relaxed mb-6">
-                    Guidata dal titolare <strong>Mosè Coppola</strong>, la nostra impresa si distingue sul territorio di Torremaggiore e provincia per l'attenzione ai dettagli, l'onestà nei costi e l'impiego di tecniche costruttive moderne.
+                <span class="text-coppola-blue font-bold text-sm uppercase tracking-widest">La Nostra Azienda</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-6 mt-2">Affidabilità e Competenza a Torremaggiore</h2>
+                <p class="text-slate-300 leading-relaxed mb-6 font-medium">
+                    <strong>Coppola Construction Company</strong>, gestita con dedizione da Mosè e Donatello Coppola, è il punto di riferimento per chi cerca serietà nell'edilizia residenziale e commerciale.
                 </p>
                 <p class="text-slate-300 leading-relaxed mb-8">
-                    Operiamo in totale conformità alle normative vigenti in materia di sicurezza sul lavoro, assicurando serenità al committente sia privato che aziendale.
+                    Il nostro impegno non si ferma alla posa dell'ultimo mattone. Operiamo in totale conformità alle rigorose normative sulla sicurezza sul lavoro, assicurando zero pensieri al committente grazie a documentazione sempre in regola.
                 </p>
                 
-                <div class="space-y-3">
-                    <div class="flex items-center space-x-3 text-slate-200">
-                        <i class="fa-solid fa-circle-check text-amber-400"></i>
-                        <span>Redazione di Piano Operativo di Sicurezza (P.O.S.) per ogni cantiere</span>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg">
+                        <i class="fa-solid fa-shield-halved text-coppola-blue text-2xl"></i>
+                        <span class="font-semibold">Redazione P.O.S. per la sicurezza di ogni cantiere</span>
                     </div>
-                    <div class="flex items-center space-x-3 text-slate-200">
-                        <i class="fa-solid fa-circle-check text-amber-400"></i>
-                        <span>Regolarità contributiva sempre verificata con DURC aggiornato</span>
-                    </div>
-                    <div class="flex items-center space-x-3 text-slate-200">
-                        <i class="fa-solid fa-circle-check text-amber-400"></i>
-                        <span>Abilitazione e Patente a Crediti per la sicurezza edili</span>
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-lg">
+                        <i class="fa-solid fa-file-contract text-coppola-blue text-2xl"></i>
+                        <span class="font-semibold">Regolarità INPS e INAIL con DURC aggiornato</span>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-slate-800 border border-slate-700 p-8 rounded-2xl shadow-2xl">
-                <h3 class="text-xl font-bold text-amber-400 mb-6">Dati Fiscali e Aziendali</h3>
-                <ul class="space-y-4 text-sm text-slate-300">
-                    <li class="flex justify-between border-b border-slate-700 pb-2">
-                        <span>Denominazione:</span>
-                        <strong class="text-white">COPPOLA CONSTRUCTION COMPANY</strong>
+            <div class="bg-white p-8 rounded-2xl shadow-2xl border-b-4 border-coppola-blue">
+                <h3 class="text-2xl font-extrabold text-coppola-black mb-6 text-center">Dati Aziendali</h3>
+                <ul class="space-y-4 text-sm text-slate-700">
+                    <li class="flex justify-between border-b border-slate-200 pb-3">
+                        <span class="font-medium">Denominazione:</span>
+                        <strong class="text-coppola-blue">Coppola Construction Company</strong>
                     </li>
-                    <li class="flex justify-between border-b border-slate-700 pb-2">
-                        <span>Titolare:</span>
-                        <strong class="text-white">Coppola Mosè</strong>
+                    <li class="flex justify-between border-b border-slate-200 pb-3">
+                        <span class="font-medium">Titolare:</span>
+                        <strong class="text-coppola-black">Coppola Mosè</strong>
                     </li>
-                    <li class="flex justify-between border-b border-slate-700 pb-2">
-                        <span>Sede Operativa:</span>
-                        <strong class="text-white">Torremaggiore (FG)</strong>
+                    <li class="flex justify-between border-b border-slate-200 pb-3">
+                        <span class="font-medium">Direzione Lavori:</span>
+                        <strong class="text-coppola-black">Mosè & Donatello Coppola</strong>
                     </li>
-                    <li class="flex justify-between border-b border-slate-700 pb-2">
-                        <span>Partita IVA:</span>
-                        <strong class="text-white">04613870718</strong>
+                    <li class="flex justify-between border-b border-slate-200 pb-3">
+                        <span class="font-medium">Sede:</span>
+                        <strong class="text-coppola-black">Torremaggiore (FG)</strong>
+                    </li>
+                    <li class="flex justify-between border-b border-slate-200 pb-3">
+                        <span class="font-medium">Partita IVA:</span>
+                        <strong class="text-coppola-black">04613870718</strong>
                     </li>
                     <li class="flex justify-between">
-                        <span>Forma Giuridica:</span>
-                        <strong class="text-white">Ditta Individuale</strong>
+                        <span class="font-medium">Forma Giuridica:</span>
+                        <strong class="text-coppola-black">Ditta Individuale</strong>
                     </li>
                 </ul>
             </div>
@@ -228,55 +257,62 @@
     </section>
 
     <!-- CONTATTI -->
-    <section id="contatti" class="py-20 bg-slate-100">
+    <section id="contatti" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Contattaci per un Sopralluogo</h2>
-                <p class="text-slate-600">Siamo a tua disposizione per informazioni, preventivi gratuiti e sopralluoghi sul posto.</p>
+                <h2 class="text-3xl font-extrabold text-coppola-black mb-4">Contattaci per un Sopralluogo</h2>
+                <div class="w-24 h-1 bg-coppola-blue mx-auto mb-6"></div>
+                <p class="text-slate-600 font-medium">Siamo a disposizione per informazioni, consulenze tecniche e preventivi gratuiti sul posto.</p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Info Box 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center">
-                    <div class="w-12 h-12 bg-amber-500 text-slate-950 rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-4">
-                        <i class="fa-solid fa-phone"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Box Contatti Mosè -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-coppola-blue text-center">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-blue rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-4">
+                        <i class="fa-solid fa-mobile-screen"></i>
                     </div>
-                    <h4 class="font-bold text-slate-900 mb-2">Telefono & WhatsApp</h4>
-                    <p class="text-slate-600 text-sm mb-4">Chiamaci per una consulenza immediata</p>
-                    <a href="tel:+393382807040" class="text-amber-600 font-bold hover:underline">+39 338 2807 040</a>
+                    <h4 class="font-bold text-coppola-black text-lg mb-1">Mosè Coppola</h4>
+                    <p class="text-slate-500 text-sm mb-4">Titolare / Gestione Cantiere</p>
+                    <a href="tel:+393382807040" class="block text-xl text-coppola-blue font-bold hover:underline mb-3">338 2807 040</a>
+                    <a href="https://wa.me/393382807040" target="_blank" class="inline-block text-green-600 font-bold hover:text-green-700">
+                        <i class="fa-brands fa-whatsapp"></i> Scrivi su WhatsApp
+                    </a>
                 </div>
 
-                <!-- Info Box 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center">
-                    <div class="w-12 h-12 bg-amber-500 text-slate-950 rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-4">
+                <!-- Box Contatti Donatello -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-coppola-black text-center">
+                    <div class="w-14 h-14 bg-coppola-gray text-coppola-black rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-4">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h4 class="font-bold text-coppola-black text-lg mb-1">Donatello Coppola</h4>
+                    <p class="text-slate-500 text-sm mb-4">Gestione Operativa</p>
+                    <a href="tel:+393892490024" class="block text-xl text-coppola-black font-bold hover:underline mb-3">389 249 0024</a>
+                    <a href="https://wa.me/393892490024" target="_blank" class="inline-block text-green-600 font-bold hover:text-green-700">
+                        <i class="fa-brands fa-whatsapp"></i> Scrivi su WhatsApp
+                    </a>
+                </div>
+
+                <!-- Info Box Sede -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-slate-300 text-center lg:col-span-1 md:col-span-2">
+                    <div class="w-14 h-14 bg-coppola-gray text-slate-600 rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-4">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
-                    <h4 class="font-bold text-slate-900 mb-2">Sede Operativa</h4>
-                    <p class="text-slate-600 text-sm mb-4">Operativi in tutta la provincia di Foggia</p>
-                    <span class="text-slate-900 font-bold">Torremaggiore (FG) - 71017</span>
-                </div>
-
-                <!-- Info Box 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 text-center">
-                    <div class="w-12 h-12 bg-amber-500 text-slate-950 rounded-full flex items-center justify-center mx-auto text-xl font-bold mb-4">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
-                    <h4 class="font-bold text-slate-900 mb-2">Orari di Lavoro</h4>
-                    <p class="text-slate-600 text-sm mb-4">Dal Lunedì al Sabato</p>
-                    <span class="text-slate-900 font-bold">07:30 - 18:30</span>
+                    <h4 class="font-bold text-coppola-black text-lg mb-1">Sede Operativa</h4>
+                    <p class="text-slate-500 text-sm mb-4">Operativi in tutta la provincia di Foggia</p>
+                    <span class="text-slate-800 font-bold text-lg">Torremaggiore (FG) - 71017</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer class="bg-coppola-black text-slate-400 py-10 border-t-4 border-coppola-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-4">
             <div>
-                <p class="text-white font-bold text-lg mb-1">COPPOLA CONSTRUCTION COMPANY di Coppola Mosè</p>
-                <p class="text-xs">Impresa Edile - Torremaggiore (FG) | P.IVA: 04613870718</p>
+                <p class="text-white font-extrabold text-xl tracking-tight mb-1">Coppola <span class="text-coppola-blue font-semibold">construction company</span></p>
+                <p class="text-sm">di Coppola Mosè & Donatello | P.IVA: 04613870718</p>
             </div>
-            <p class="text-xs text-slate-500">
+            <p class="text-xs text-slate-500 mt-4">
                 &copy; 2026 Tutti i diritti riservati.
             </p>
         </div>
